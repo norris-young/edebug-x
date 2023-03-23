@@ -254,7 +254,7 @@ edebug-breakpoint-list-mode."
              (func-name (car form))
              (breakpoints (car (cdr edebug-data)))
              (stop-points (nth 2 edebug-data)))
-        (loop for i in breakpoints do
+        (cl-loop for i in breakpoints do
               (add-to-list
                'results
                (list form
